@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://wlfwbk215t4y"]
+
+[ext_resource type="Script" uid="uid://cg8nva6egg62l" path="res://Enemies/enemy_1.gd" id="1_unw8j"]
+[ext_resource type="Texture2D" uid="uid://bydlimxqfgq15" path="res://Assets/Fighter_Craft.png" id="2_t1fru"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jgmyh"]
+
+[node name="Enemy1" type="Node2D"]
+script = ExtResource("1_unw8j")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.153288, 0.125394)
+texture = ExtResource("2_t1fru")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(6.71429, 5.65117)
+shape = SubResource("CircleShape2D_jgmyh")

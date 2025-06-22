@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci4f6f8w68f0n"]
+
+[ext_resource type="Script" uid="uid://t5kbh3t0jhlh" path="res://Main/game.gd" id="1_0wgfy"]
+[ext_resource type="Texture2D" uid="uid://dcjirnj7nlhbo" path="res://Assets/Earth_Space Background 2.png" id="1_gdh3y"]
+[ext_resource type="PackedScene" uid="uid://dq5nv6rdi3gc8" path="res://Player/Station.tscn" id="2_mydax"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_0wgfy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(540, 960)
+scale = Vector2(1.6639, -6.70488)
+ignore_rotation = false
+zoom = Vector2(0.79, 0.79)
+
+[node name="Planet" type="Sprite2D" parent="."]
+position = Vector2(540, 960)
+texture = ExtResource("1_gdh3y")
+
+[node name="SpawnMarker1" type="Marker2D" parent="."]
+position = Vector2(540, -100)
+
+[node name="Station" parent="." instance=ExtResource("2_mydax")]
+position = Vector2(540, 960)
+
+[node name="EnemySpawnTimer" type="Timer" parent="."]
+autostart = true

@@ -9,7 +9,6 @@ radius = 0.517555
 [node name="Bullet" type="Area2D"]
 scale = Vector2(2.18617, 1.3863)
 script = ExtResource("1_js047")
-speed = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.0237884, 0.0522907)
